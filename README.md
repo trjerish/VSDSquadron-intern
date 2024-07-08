@@ -414,43 +414,56 @@ To get the wave from use the command
 
      SUB
 
+![task 5 sll12](https://github.com/trjerish/VSDSquadron-intern/assets/155642455/e2073d7a-de98-45b6-be50-780406035dc5)
 3.AND r2,r1,r3
 
-    AND
+     AND
 
 4.OR r8,r2,r5
 
-    OR
+     OR
 
 5.XOR r8,r1,r4
 
-   XOR
+     XOR
 
 6.SLT r10,r2,r4
 
-  SLT
+     SLT
 
 7.ADDI r122,r3,r5
 
-  ADDI
+     ADDI
 
+![task 5 addi7](https://github.com/trjerish/VSDSquadron-intern/assets/155642455/0d3272f5-98a6-4b13-82b3-3bdd96e4b9b3)
+   
 8.SW r3,r1,r4
 
-  SW
+     SW
+
+ ![task 5 sw8](https://github.com/trjerish/VSDSquadron-intern/assets/155642455/5e8b274d-dcb4-47ee-b9ac-1688bba6f9ac)
 
 9.SRL r16,r11,r2
 
-  SRL
+     SRL
+
+ ![task 5 srl9](https://github.com/trjerish/VSDSquadron-intern/assets/155642455/1298c54b-db8d-4fc1-9cd3-8e830ba8dc4d)    
 
 10.BNE r0,r1,20
 
-   BNE
+     BNE
+
+ ![task 5 bne10](https://github.com/trjerish/VSDSquadron-intern/assets/155642455/8a734c7f-e643-489a-a5e3-c3a32e4a50b5)
 
 11.BEQ r0,r0,15
 
-   BEQ
+     BEQ
+
+![task 5 beq11](https://github.com/trjerish/VSDSquadron-intern/assets/155642455/6791ad27-1ad4-4a39-891a-4fe3798f9aae)
 
 12.SLL r15,r11,r2
 
-   SLL
+     SLL
+
+![task 5 sll12](https://github.com/trjerish/VSDSquadron-intern/assets/155642455/e2073d7a-de98-45b6-be50-780406035dc5)
 
