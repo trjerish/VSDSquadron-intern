@@ -419,18 +419,26 @@ To get the wave from use the command
 
      AND
 
+![task 5 and3](https://github.com/trjerish/VSDSquadron-intern/assets/155642455/217f7331-75a8-4678-b987-7193f012f314)
+
 4.OR r8,r2,r5
 
      OR
+
+![task 5 or4](https://github.com/trjerish/VSDSquadron-intern/assets/155642455/c028cf74-e052-4f56-b3a5-a8b5896f5d50)
 
 5.XOR r8,r1,r4
 
      XOR
 
+![task 5 xor5](https://github.com/trjerish/VSDSquadron-intern/assets/155642455/f68c6b3f-2ea6-4c3c-808f-353eaa2260d7)
+
 6.SLT r10,r2,r4
 
      SLT
 
+![task 5 slt6](https://github.com/trjerish/VSDSquadron-intern/assets/155642455/9d6d53fe-e327-4b85-b0a9-25b7a9097ffe)
+      
 7.ADDI r122,r3,r5
 
      ADDI
