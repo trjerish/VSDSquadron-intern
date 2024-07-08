@@ -402,4 +402,52 @@ To get the wave from use the command
 
      gtkwave iiitb_rv32i.vcd
 
+## Output Waveform
+1.ADD r1,r2,r3
+
+     ADD
+
+2.SUB r3,r1,r2
+
+     SUB
+
+3.AND r2,r1,r3
+
+    AND
+
+4.OR r8,r2,r5
+
+    OR
+
+5.XOR r8,r1,r4
+
+   XOR
+
+6.SLT r10,r2,r4
+
+  SLT
+
+7.ADDI r122,r3,r5
+
+  ADDI
+
+8.SW r3,r1,r4
+
+  SW
+
+9.SRL r16,r11,r2
+
+  SRL
+
+10.BNE r0,r1,20
+
+   BNE
+
+11.BEQ r0,r0,15
+
+   BEQ
+
+12.SLL r15,r11,r2
+
+   SLL
 
