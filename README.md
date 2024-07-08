@@ -366,27 +366,36 @@ The task is to generate Verilog and testbench using RISC-V and verify the functi
 First to run the Verilog we need a tool called iverilog to install iverilog commands are 
 
        sudo apt-get update 
-             sudo apt-get install iverilog
-To get the waveform we need a tool called gtkwave command is 
-     sudo apt-get install gtkwave
+       sudo apt-get install iverilog
+To get the waveform we need a tool called gtkwave command is
+
+       sudo apt-get install gtkwave
 Create a directory using the command 
-     mkdir jerish
-Create files using the touch command as 
-   touch jerish_rv32i.v 
-   touch jerish_rv32i_tb.v
+
+       mkdir jerish
+Create files using the touch command as
+
+       touch jerish_rv32i.v 
+       touch jerish_rv32i_tb.v
 Writing Verilog code and testbench is not part of the internship we will be taking references from the repo https://github.com/vinayrayapati/rv32i/
 Now copy the code from the 
-   iiitb_rv32i.v  
-   iiitb_rv32i_tb.v 
+
+       iiitb_rv32i.v  
+       iiitb_rv32i_tb.v 
 paste the code in 
-   Nehith_rv32i.v
-   Nehith_rv32i_tb.v 
+
+       jerish_rv32i.v
+       jerish_rv32i_tb.v 
+       
 in leaf pad and save the file
 To run the code and simulate use the command 
-   iverilog -o jerish_rv32i jerish_rv32i.v jerish_rv32i_tb.v 
+
+      iverilog -o jerish_rv32i jerish_rv32i.v jerish_rv32i_tb.v 
 to get the output 
-  ./jerish_rv32i
+
+     ./jerish_rv32i
 To get the wave from use the command 
-  gtkwave iiitb_rv32i.vcd
+
+     gtkwave iiitb_rv32i.vcd
 
 
