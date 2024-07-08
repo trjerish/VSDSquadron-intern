@@ -364,12 +364,12 @@ The task is to generate Verilog and testbench using RISC-V and verify the functi
 ## Steps to perform functional simulation:
 
 First to run the Verilog we need a tool called iverilog to install iverilog commands are 
-   sudo apt-get update 
-   sudo apt-get install iverilog
+     sudo apt-get update 
+     sudo apt-get install iverilog
 To get the waveform we need a tool called gtkwave command is 
-   sudo apt-get install gtkwave
+     sudo apt-get install gtkwave
 Create a directory using the command 
-   mkdir jerish
+     mkdir jerish
 Create files using the touch command as 
    touch jerish_rv32i.v 
    touch jerish_rv32i_tb.v
