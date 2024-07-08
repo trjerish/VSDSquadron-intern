@@ -407,7 +407,7 @@ To get the wave from use the command
 
      ADD
 
-     ![task 5 add1](https://github.com/trjerish/VSDSquadron-intern/assets/155642455/0b509c62-3ae9-4c17-8cb5-1cdabab2ae7f)
+![task 5 add1](https://github.com/trjerish/VSDSquadron-intern/assets/155642455/0b509c62-3ae9-4c17-8cb5-1cdabab2ae7f)
 
 
 2.SUB r3,r1,r2
