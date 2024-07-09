@@ -4,6 +4,7 @@ Clock Cycle Divider - Crafting A Digital Clock Divider Circuit
 ***
 ### VICTO JERISH I
 B.E Electronics And Communication Engineering
+
 R.M.K Engineering College
 ## Features Of RISC-V
 + Open Standard: Freely available and open-source ISA.
@@ -475,3 +476,5 @@ To get the wave from use the command
 
 ![task 5 sll12](https://github.com/trjerish/VSDSquadron-intern/assets/155642455/e2073d7a-de98-45b6-be50-780406035dc5)
 
+Task 5 is Completed
+***
