@@ -529,6 +529,30 @@ Ensure the ground probe of the oscilloscope/logic analyzer is connected to the g
 Use jumper wires to make all necessary connections between the components on the breadboard and the development board.
 Ensure solid and secure connections to avoid loose contacts.
 
+## Table
+
+## Components and Connections
+
+| Component                      | Pin Name/Number      | Connection Description                                    |
+|--------------------------------|----------------------|-----------------------------------------------------------|
+| **RISC-V Processor**           | GPIO Clock Input     | Connect to the output of the internal clock generator     |
+|                                | GPIO Output Pin      | Outputs the divided clock signal                          |
+|                                | VCC                  | Connect to VCC rail on the breadboard (from Power Supply) |
+|                                | GND                  | Connect to GND rail on the breadboard (from Power Supply) |
+| **Internal Clock Generator**   | Clock Output         | Connect to GPIO Clock Input on the RISC-V Processor       |
+|                                | VCC                  | Connect to VCC rail on the breadboard                     |
+|                                | GND                  | Connect to GND rail on the breadboard                     |
+| **Power Supply**               | VCC                  | Connect to VCC rail on the breadboard                     |
+|                                | GND                  | Connect to GND rail on the breadboard                     |
+| **LED**                        | Anode (+)            | Connect to GPIO Output Pin on the RISC-V Processor        |
+|                                | Cathode (-)          | Connect to GND rail on the breadboard                     |
+| **Button**                     | One side             | Connect to GPIO Input Pin on the RISC-V Processor         |
+|                                | Other side           | Connect to GND rail on the breadboard                     |
+| **Oscilloscope/Logic Analyzer**| Probe 1              | Connect to GPIO Output Pin (LED) on the RISC-V Processor  |
+|                                | Probe 2              | Connect to GPIO Input Pin (Button) on the RISC-V Processor|
+|                                | Ground Probe         | Connect to GND rail on the breadboard                     |
+
+
 ## Program
 
 
