@@ -658,4 +658,4 @@ Attach the probes to the relevant GPIO pins for signal monitoring.
 
 Turn on the power supply and ensure all components are functioning correctly.
 
-Task 5 is Completed
+Task 6 is Completed
