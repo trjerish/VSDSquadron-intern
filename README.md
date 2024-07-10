@@ -478,3 +478,158 @@ To get the wave from use the command
 
 Task 5 is Completed
 ***
+
+## Task 6
+The task is used to develop the project with its circuit and block diagram and a pin connections
+
+## Clock Cycle Divider Crafting Digital Clock Cycle Divider
+
+## Indroduction
+
+One kind of electronic circuit used to lower a clock signal's frequency is a digital clock divider circuit. In digital electronics, it is frequently used to convert faster clock signals into slower ones. To put it simply, the clock divider circuit divides the frequency of the input clock signal depending on the given Division Factor after first receiving an input clock signal within a certain frequency range. Using this example, you may better understand how a clock divider circuit that receives an input clock frequency of 100 MHz and a clock division factor of 10 would generate clock signals at 10 MHz.
+
+## Components
+
++ RISC-V Processor Development Board
++ Internal Clock Generator
++ General Purpose Input/Output (GPIO) Pins
++ Oscilloscope/Logic Analyzer
++ Power Supply
++ Breadboard
++ Jumper Wires
+
+## Connections
+
+# Power Supply to Development Board
+
+1.Connect the positive terminal of the power supply to the VCC (or equivalent power input) pin on the RISC-V development board.
+Connect the negative terminal of the power supply to the GND pin on the development board.
+
+# Internal Clock Generator to Development Board
+
+2.Connect the output of the internal clock generator to the clock input pin (often labeled as CLK) on the RISC-V development board.
+
+# GPIO Pins to Breadboard
+
+3.Connect the GPIO pins on the RISC-V development board to various points on the breadboard using jumper wires.
+Ensure that the connections are made in a way that allows for easy access to the pins for interfacing with other components or sensors.
+
+# Breadboard Connections
+
+4.Use the breadboard to create connections between the GPIO pins and other components such as LEDs, buttons, or sensors.
+Ensure proper grounding by connecting the GND pin from the development board to the ground rail on the breadboard.
+
+# Oscilloscope/Logic Analyzer to GPIO Pins
+
+5.Connect the probes of the oscilloscope or logic analyzer to the GPIO pins you want to monitor.
+Ensure the ground probe of the oscilloscope/logic analyzer is connected to the ground rail on the breadboard for accurate measurements.
+
+# Jumper Wires
+
+6.Use jumper wires to make all necessary connections between the components on the breadboard and the development board.
+Ensure solid and secure connections to avoid loose contacts.
+
+## Program
+
+
+          Implementation of clock divider in RISC-V processor:
+          
+          #include <stdint.h>
+          #include <stdio.h>
+          #include <stdbool.h>
+          #include "platform.h"
+          #include "encoding.h"
+          #include "gpio.h"
+          #include "plic.h"
+          #include "interrupt.h"
+          
+          #define LED_PIN 5     // Adjust based on your board's LED pin
+          #define BUTTON_PIN 4  // Adjust based on your board's button pin
+          
+          volatile bool button_pressed = false;
+          
+          void button_isr(void) {
+              if (gpio_read(BUTTON_PIN) == 0) {
+                  button_pressed = true;
+              }
+              // Clear interrupt
+              gpio_clear_interrupt(BUTTON_PIN);
+          }
+          
+          void setup_gpio() {
+              // Initialize GPIO
+              gpio_init();
+              
+              // Set LED pin as output
+              gpio_set_output(LED_PIN);
+              
+              // Set button pin as input with pull-up resistor
+              gpio_set_input(BUTTON_PIN);
+              gpio_enable_pullup(BUTTON_PIN);
+              
+              // Enable interrupt on button pin
+              gpio_enable_interrupt(BUTTON_PIN);
+              plic_enable_interrupt(BUTTON_PIN);
+              plic_set_priority(BUTTON_PIN, 1);
+              
+              // Register the button interrupt service routine
+              register_interrupt_handler(BUTTON_PIN, button_isr);
+          }
+          
+          void delay(uint32_t count) {
+              volatile uint32_t i;
+              for (i = 0; i < count; i++);
+          }
+          
+          int main() {
+              // Initialize GPIO
+              setup_gpio();
+              
+              // Enable global interrupts
+              set_csr(mstatus, MSTATUS_MIE);
+              
+              printf("RISC-V GPIO Example\n");
+              
+              while (1) {
+                  // Blink LED
+                  gpio_write(LED_PIN, 1);
+                  delay(1000000);
+                  gpio_write(LED_PIN, 0);
+                  delay(1000000);
+                  
+                  // Check for button press
+                  if (button_pressed) {
+                      printf("Button Pressed!\n");
+                      button_pressed = false;
+                  }
+              }
+              
+              return 0;
+          }
+
+
+## Step-by-Step Instruction.
+
+# Setup the Power Supply:
+
+1.Connect the power supply to the RISC-V board ensuring correct voltage and polarity.
+
+# Connect the Clock Generator:
+
+2.Connect the clock generator output to the CLK pin on the development board.
+
+# Connect GPIO Pins:
+
+3.Use jumper wires to connect GPIO pins from the development board to the breadboard.
+
+# Setup the Breadboard:
+
+4.Place components like LEDs, buttons, or sensors on the breadboard and connect them to the GPIO pins via jumper wires.
+
+# Connect the Oscilloscope/Logic Analyzer:
+
+5.Attach the probes to the relevant GPIO pins for signal monitoring.
+
+# Power Up:
+
+6.Turn on the power supply and ensure all components are functioning correctly.
