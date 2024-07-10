@@ -500,31 +500,31 @@ One kind of electronic circuit used to lower a clock signal's frequency is a dig
 
 ## Connections
 
-# Power Supply to Development Board
+## Power Supply to Development Board
 
 1.Connect the positive terminal of the power supply to the VCC (or equivalent power input) pin on the RISC-V development board.
 Connect the negative terminal of the power supply to the GND pin on the development board.
 
-# Internal Clock Generator to Development Board
+## Internal Clock Generator to Development Board
 
 2.Connect the output of the internal clock generator to the clock input pin (often labeled as CLK) on the RISC-V development board.
 
-# GPIO Pins to Breadboard
+## GPIO Pins to Breadboard
 
 3.Connect the GPIO pins on the RISC-V development board to various points on the breadboard using jumper wires.
 Ensure that the connections are made in a way that allows for easy access to the pins for interfacing with other components or sensors.
 
-# Breadboard Connections
+## Breadboard Connections
 
 4.Use the breadboard to create connections between the GPIO pins and other components such as LEDs, buttons, or sensors.
 Ensure proper grounding by connecting the GND pin from the development board to the ground rail on the breadboard.
 
-# Oscilloscope/Logic Analyzer to GPIO Pins
+## Oscilloscope/Logic Analyzer to GPIO Pins
 
 5.Connect the probes of the oscilloscope or logic analyzer to the GPIO pins you want to monitor.
 Ensure the ground probe of the oscilloscope/logic analyzer is connected to the ground rail on the breadboard for accurate measurements.
 
-# Jumper Wires
+## Jumper Wires
 
 6.Use jumper wires to make all necessary connections between the components on the breadboard and the development board.
 Ensure solid and secure connections to avoid loose contacts.
@@ -610,26 +610,26 @@ Ensure solid and secure connections to avoid loose contacts.
 
 ## Step-by-Step Instruction.
 
-# Setup the Power Supply:
+## Setup the Power Supply:
 
 1.Connect the power supply to the RISC-V board ensuring correct voltage and polarity.
 
-# Connect the Clock Generator:
+## Connect the Clock Generator:
 
 2.Connect the clock generator output to the CLK pin on the development board.
 
-# Connect GPIO Pins:
+## Connect GPIO Pins:
 
 3.Use jumper wires to connect GPIO pins from the development board to the breadboard.
 
-# Setup the Breadboard:
+## Setup the Breadboard:
 
 4.Place components like LEDs, buttons, or sensors on the breadboard and connect them to the GPIO pins via jumper wires.
 
-# Connect the Oscilloscope/Logic Analyzer:
+## Connect the Oscilloscope/Logic Analyzer:
 
 5.Attach the probes to the relevant GPIO pins for signal monitoring.
 
-# Power Up:
+## Power Up:
 
 6.Turn on the power supply and ensure all components are functioning correctly.
